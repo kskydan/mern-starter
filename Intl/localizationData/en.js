@@ -27,5 +27,13 @@ export default {
     	  =1 {has # comment}
     	  other {has # comments}
     	} as of {date}`,
+    createComment: 'Create new comment',
+    commentContent: 'Comment content',
+    authorComment: 'Author:',
+    btnEditComment: 'Edit',
+    btnDeleteComment: 'Delete',
+    btnCreateComment: 'Create',
+    btnSaveComment: 'Save',
+    btnCancelComment: 'Cancel',
   },
 };
