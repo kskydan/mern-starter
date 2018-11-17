@@ -13,7 +13,9 @@ import { fetchPost } from '../../PostActions';
 // Import Selectors
 import { getPost } from '../../PostReducer';
 
-export function PostDetailPage(props) {
+import CommentList from '../../../Comment/components/CommentList';
+
+export function PostDetailPage (props) {
   return (
     <div>
       <Helmet title={props.post.title} />
@@ -22,6 +24,9 @@ export function PostDetailPage(props) {
         <p className={styles['author-name']}><FormattedMessage id="by" /> {props.post.name}</p>
         <p className={styles['post-desc']}>{props.post.content}</p>
       </div>
+      <CommentList
+        postId={props.post.cuid}
+      />
     </div>
   );
 }
@@ -32,7 +37,7 @@ PostDetailPage.need = [params => {
 }];
 
 // Retrieve data from store as props
-function mapStateToProps(state, props) {
+function mapStateToProps (state, props) {
   return {
     post: getPost(state, props.params.cuid),
   };
