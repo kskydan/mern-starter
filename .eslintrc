@@ -12,10 +12,27 @@
     "node": true,
     "mocha": true
   },
-  "ecmaFeatures": {
-    "jsx": true,
-    "es6": true,
-    "classes": true
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "jsx": true,
+      "es6": true,
+      "forOf": true,
+      "blockBindings": true,
+      "arrowFunctions": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "generators": true,
+      "restParams": true,
+      "spread": true,
+      "superInFunctions": true,
+      "templateStrings": true,
+      "experimentalObjectRestSpread": true,
+      "experimentalDecorators": false
+    }
   },
   "rules": {
      "comma-dangle": [1, "always-multiline"],
@@ -23,6 +40,9 @@
      "max-len": [1, 180, 4],
      "arrow-body-style": [0],
      "react/jsx-no-bind": [0],
-     "import/no-unresolved": [0] // Until import plugin supports webpack 2 resolveModules
+     "import/no-unresolved": [0],
+     "padded-blocks": "off",
+     "space-before-function-paren": "off",
+     "no-use-before-define":"off"
   }
 }
